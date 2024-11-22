@@ -1,6 +1,6 @@
 package com.kh.java.view;
 
-public class StudentMenu {
+public class subjectMenu {
 	// 메뉴
 	public static void printMenu() {
 		System.out.println("+++++++++++++++++++++");

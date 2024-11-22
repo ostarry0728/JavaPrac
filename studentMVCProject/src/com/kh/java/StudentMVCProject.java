@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import com.kh.java.controller.StudentRegisterManager;
 import com.kh.java.view.StudentCURDMenu;
-import com.kh.java.view.StudentMenu;
+import com.kh.java.view.subjectMenu;
 
 public class StudentMVCProject {
 	public static Scanner sc = new Scanner(System.in);
@@ -13,7 +13,7 @@ public class StudentMVCProject {
 	public static void main(String[] args) throws SQLException {
 		boolean exitFlag = false;
 		while (!exitFlag) {
-			StudentMenu.printMenu();
+			subjectMenu.printMenu();
 			int num = Integer.parseInt(sc.nextLine());
 			switch (num) {
 			case StudentCURDMenu.PRINT: {
