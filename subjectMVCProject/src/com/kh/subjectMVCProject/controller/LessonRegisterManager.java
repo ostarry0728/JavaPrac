@@ -12,10 +12,10 @@ public class LessonRegisterManager {
 	public void insertManager() {
 		LessonDAO ldao = new LessonDAO();
 		// 화면으로부터 데이터 입력받음
-		System.out.print("과목요약입력(O-운영체제 ,M-어셈블리 ,C-컴파일러 ,J-자료구조 ,P-프로그래밍 ,D-데이터베이스 ,S-소프르웨어공학)>>");
+		System.out.print("과목요약입력(O-운영체제 ,M-어셈블리 ,C-컴파일러 ,J-자료구조 ,P-프로그래밍 ,D-데이터베이스 ,S-소프트웨어공학)>>");
 		String abbre = (sc.nextLine().trim());
 
-		System.out.print("과목명입력(O-운영체제 ,M-어셈블리 ,C-컴파일러 ,J-자료구조 ,P-프로그래밍 ,D-데이터베이스 ,S-소프르웨어공학)>>");
+		System.out.print("과목명입력(O-운영체제 ,M-어셈블리 ,C-컴파일러 ,J-자료구조 ,P-프로그래밍 ,D-데이터베이스 ,S-소프트웨어공학)>>");
 		String name = (sc.nextLine().trim());
 
 		LessonVO lvo = new LessonVO(abbre, name);
