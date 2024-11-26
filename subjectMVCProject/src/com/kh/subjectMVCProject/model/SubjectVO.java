@@ -1,12 +1,19 @@
-package com.kh.subjectMVCProject.controller.model;
+package com.kh.subjectMVCProject.model;
 
 public class SubjectVO {
-	private int no; // number, -- pk, seq
-	private String num; // varchar2(2) not null, -- 학과번호 01, 02, 03, 04, 05
-	private String name; // varchar2(24) not null -- 학과이름
+	private int no; // -- pk, seq
+	private String num; // -- 학과번호 01, 02, 03,04,05
+	private String name; // -- 학과이름
 
 	public SubjectVO() {
 		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public SubjectVO(String num, String name) {
+		super();
+		this.num = num;
+		this.name = name;
 	}
 
 	public SubjectVO(int no, String num, String name) {
@@ -16,16 +23,9 @@ public class SubjectVO {
 		this.name = name;
 	}
 
-	public SubjectVO(String num, String name) {
-		super();
-		this.num = num;
-		this.name = name;
-	}
-
 	public int getNo() {
 		return no;
 	}
-
 
 	public void setNo(int no) {
 		this.no = no;

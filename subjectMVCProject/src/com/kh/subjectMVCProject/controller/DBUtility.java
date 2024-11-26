@@ -1,8 +1,6 @@
 package com.kh.subjectMVCProject.controller;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,7 +13,7 @@ public class DBUtility {
 
 	public static Connection dbCon() {
 		Connection con = null;
-		// 1. db.properties file 에서 id, pw, url setting 가져오기
+		// 1. db.properties file( id, pw, url setting)
 		String filePath = "D:\\JavaPrac\\subjectMVCProject\\src\\db.properties";
 		Properties pt = new Properties();
 		try {
@@ -27,8 +25,8 @@ public class DBUtility {
 		String pw = pt.getProperty("pw");
 		String url = pt.getProperty("url");
 
-		// 2. jdbc driver load 
-		//2. db connect
+		// 2. jdbc driver load
+		// 3. db connect
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			con = DriverManager.getConnection(url, id, pw);

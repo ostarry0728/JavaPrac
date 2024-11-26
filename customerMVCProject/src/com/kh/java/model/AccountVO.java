@@ -4,6 +4,7 @@ import java.sql.Date;
 
 //계정 정보
 public class AccountVO {
+	private int no; // --pk, seq 
 	private String username; // --사용자명
 	private String password; // --비밀번호
 	private String registrationDate; // --등록일

@@ -1,26 +1,24 @@
-package com.kh.subjectMVCProject.controller.model;
+package com.kh.subjectMVCProject.model;
 
 import java.sql.Date;
 
 public class StudentVO {
-	private int no; // pk, seq
-	private String num; // varchar2(8) not null, 학번(년도학과번호)
-	private String name; // varchar2(12) not null, 이름
-	private String id; // varchar2(12) not null, 아이디
-	private String passwd; // varchar2(12) not null, 패스워드
-	private String sNum; // varchar2(2) not null, 학과번호(fk)
-	private String birthday; // varchar2(8) not null, 생년월일
-	private String phone; // varchar2(15) not null, 전화번호
-	private String address; // varchar2(80) not null, 주소
-	private String email; // varchar2(40) not null, 이메일
-	private Date sdate; // date default sysdate 등록일
+	private int no; // --pk, seq
+	private String num; // --학번(년도학과번호)
+	private String name; // --이름
+	private String id; // --아이디
+	private String passwd; // --패스워드
+	private String s_num; // --학과번호(fk)
+	private String birthday; // --생년월일
+	private String phone; // --전화번호
+	private String address; // --주소
+	private String email; // --이메일
+	private Date sdate; // --등록일
 
 	public StudentVO() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	public StudentVO(int no, String num, String name, String id, String passwd, String sNum, String birthday,
+	public StudentVO(int no, String num, String name, String id, String passwd, String s_num, String birthday,
 			String phone, String address, String email, Date sdate) {
 		super();
 		this.no = no;
@@ -28,7 +26,7 @@ public class StudentVO {
 		this.name = name;
 		this.id = id;
 		this.passwd = passwd;
-		this.sNum = sNum;
+		this.s_num = s_num;
 		this.birthday = birthday;
 		this.phone = phone;
 		this.address = address;
@@ -76,12 +74,12 @@ public class StudentVO {
 		this.passwd = passwd;
 	}
 
-	public String getsNum() {
-		return sNum;
+	public String getS_num() {
+		return s_num;
 	}
 
-	public void setsNum(String sNum) {
-		this.sNum = sNum;
+	public void setS_num(String s_num) {
+		this.s_num = s_num;
 	}
 
 	public String getBirthday() {
@@ -126,9 +124,9 @@ public class StudentVO {
 
 	@Override
 	public String toString() {
-		return "[no=" + no + ", num=" + num + ", name=" + name + ", id=" + id + ", passwd=" + passwd
-				+ ", sNum=" + sNum + ", birthday=" + birthday + ", phone=" + phone + ", address=" + address + ", email="
-				+ email + ", sdate=" + sdate + "]";
+		return "[no=" + no + ", num=" + num + ", name=" + name + ", id=" + id + ", passwd=" + passwd + ", s_num="
+				+ s_num + ", birthday=" + birthday + ", phone=" + phone + ", address=" + address + ", email=" + email
+				+ ", sdate=" + sdate + "]";
 	}
 
 }

@@ -4,7 +4,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import com.kh.subjectMVCProject.controller.model.StudentVO;
+import com.kh.subjectMVCProject.model.StudentVO;
 
 public class TraineeRegisterManager {
 	public static Scanner sc = new Scanner(System.in);
