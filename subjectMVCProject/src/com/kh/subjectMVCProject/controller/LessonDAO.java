@@ -20,7 +20,7 @@ public class LessonDAO {
 	public ArrayList<LessonVO> lessonSelect(LessonVO lvo) {
 		Connection con = null; // 오라클 DB 접속하는 관문
 		PreparedStatement pstmt = null; // 오라클에서 작업할 쿼리문을 사용할수있게 해주는 명령문
-		ResultSet rs = null; // 오라클에서 결과물을 받는객체
+		ResultSet rs = null; // 오라클에서 결과물을 받는객체01
 		ArrayList<LessonVO> lessonList = new ArrayList<LessonVO>(); // 결과값을 다른객체에 전달하기 위해서 사용하는 객체
 
 		try {
@@ -74,18 +74,23 @@ public class LessonDAO {
 		Connection con = null; // 오라클 DB 접속하는 관문
 		PreparedStatement pstmt = null; // 오라클에서 작업할 쿼리문을 사용할수있게 해주는 명령문
 		boolean successFlag = false;
+
+		con = DBUtility.dbCon();
 		try {
-			con = DBUtility.dbCon();
+			con.setAutoCommit(false);
 			pstmt = con.prepareStatement(LESSON_DELETE);
 			pstmt.setInt(1, lvo.getNo());
 			int count = pstmt.executeUpdate();
 			successFlag = (count != 0) ? (true) : (false);
+			if (count != 0) {
+				con.commit();
+				successFlag = true;
+			}
 		} catch (SQLException e) {
-			System.out.println(e.toString());
-		} finally {
-			DBUtility.dbClose(con, pstmt);
+			e.printStackTrace();
 		}
 		return successFlag;
+
 	}
 
 	// Lesson 테이블에서 update 레코드를 수정한다. (update)
